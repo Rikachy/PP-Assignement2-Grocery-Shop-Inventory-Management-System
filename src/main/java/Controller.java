@@ -45,15 +45,4 @@ public class Controller {
         System.out.println("This button exits the program");
     }
 
-    //Add Items
-
-    @FXML
-    private void save(){
-        System.out.println("This button saves the newly added items");
-    }
-
-    @FXML
-    private void close(){
-        System.out.println("This button closes the add Item interface");
-    }
 }

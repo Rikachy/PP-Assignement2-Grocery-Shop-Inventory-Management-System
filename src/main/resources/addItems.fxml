@@ -9,11 +9,11 @@
     <Label text="Add new Grocery Item" style="-fx-font-size: 20px; -fx-font-weight: bold;"> </Label>
     <HBox alignment="TOP_CENTER" spacing="10">
         <Label text="Item Name"> </Label>
-        <TextField text="" maxWidth="75" maxHeight="20"> </TextField>
+        <TextField text="" maxWidth="75" maxHeight="20" fx:id="itemNameField"> </TextField>
     </HBox>
     <HBox alignment="TOP_CENTER" spacing="10">
         <Label text="Quantity"> </Label>
-        <TextField text="" maxWidth="75" maxHeight="20"> </TextField>
+        <TextField text="" maxWidth="75" maxHeight="20" fx:id="itemQuantityField"> </TextField>
     </HBox>
     <HBox alignment="TOP_CENTER" spacing="10">
         <Button text="Save" maxWidth="100" maxHeight="20" onAction="#save"/>

@@ -9,12 +9,19 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.scene.control.Alert;
 
-
 //Control Panel
 public class Controller {
+
+    @FXML
+    private TextField itemNameField;
+    @FXML
+    private TextField itemQuantityField;
+
+
     @FXML
     private void addItems() throws IOException {
         FXMLLoader loader = new FXMLLoader(App.class.getResource("/addItems.fxml"));

@@ -7,7 +7,7 @@ public class App extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         FXMLLoader loader = new FXMLLoader(App.class.getResource("/main.fxml"));
-        Scene scene = new Scene(loader.load(), 500, 500);
+        Scene scene = new Scene(loader.load(), 500, 350);
         stage.setTitle("Control Panel");
         stage.setScene(scene);
         stage.show();

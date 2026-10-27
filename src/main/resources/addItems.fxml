@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="Controller" alignment="TOP_CENTER" spacing="15" style="-fx-padding: 50 0 0 0;">
+    <Label text="Add new Grocery Item" style="-fx-font-size: 20px; -fx-font-weight: bold;"> </Label>
+    <HBox alignment="TOP_CENTER" spacing="10">
+        <Label text="Item Name"> </Label>
+        <TextField text="" maxWidth="75" maxHeight="20"> </TextField>
+    </HBox>
+    <HBox alignment="TOP_CENTER" spacing="10">
+        <Label text="Quantity"> </Label>
+        <TextField text="" maxWidth="75" maxHeight="20"> </TextField>
+    </HBox>
+    <HBox alignment="TOP_CENTER" spacing="10">
+        <Button text="Save" maxWidth="100" maxHeight="20" onAction="#save"/>
+        <Button text="Close" maxWidth="100" maxHeight="20" onAction="#close"/>
+    </HBox>
+</VBox>
+

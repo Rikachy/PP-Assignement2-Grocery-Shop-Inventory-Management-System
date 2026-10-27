@@ -1,16 +1,29 @@
 //Controller.java
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.fxml.FXMLLoader;
+import javafx.stage.Stage;
 import javafx.scene.control.Alert;
 
+
+//Control Panel
 public class Controller {
     @FXML
-    private void addItems() {
-        System.out.println("This button adds an item");
+    private void addItems() throws IOException {
+        FXMLLoader loader = new FXMLLoader(App.class.getResource("/addItems.fxml"));
+        Scene scene = new Scene(loader.load(), 450, 300);
+
+        Stage stage = new Stage();
+        stage.setTitle("Adding Items");
+        stage.setScene(scene);
+        stage.show();
     }
     @FXML
     private void seeItems() {
@@ -23,5 +36,17 @@ public class Controller {
     @FXML
     private void exit() {
         System.out.println("This button exits the program");
+    }
+
+    //Add Items
+
+    @FXML
+    private void save(){
+        System.out.println("This button saves the newly added items");
+    }
+
+    @FXML
+    private void close(){
+        System.out.println("This button closes the add Item interface");
     }
 }

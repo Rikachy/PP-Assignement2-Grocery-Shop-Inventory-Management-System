@@ -16,10 +16,6 @@ import javafx.scene.control.Alert;
 //Control Panel
 public class Controller {
 
-    @FXML
-    private TextField itemNameField;
-    @FXML
-    private TextField itemQuantityField;
 
 
     @FXML

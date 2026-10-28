@@ -1,5 +1,6 @@
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 import java.sql.SQLException;
 
@@ -20,6 +21,7 @@ public class AddItemsController {
 
     @FXML
     private void close(){
-        System.out.println("This button closes the add Item interface");
+        Stage addStage = (Stage) itemQuantityField.getScene().getWindow();
+        addStage.close();
     }
 }

@@ -20,8 +20,8 @@ public class AddItemsController {
             if(itemName.isEmpty()) {
                 throw new InvalidItemException("The name can't be empty");
             }
-            if(itemQuantity < 0) {
-                throw new InvalidItemException("Quantity can't be less than 0");
+            if(itemQuantity <= 0) {
+                throw new InvalidItemException("Quantity can't be less or equal to 0");
             }
             Database.addItems(itemName, itemQuantity);
 

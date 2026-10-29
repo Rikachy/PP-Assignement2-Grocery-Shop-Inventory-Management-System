@@ -25,11 +25,16 @@ public class AddItemsController {
             }
             Database.addItems(itemName, itemQuantity);
 
+            showAlert(Alert.AlertType.INFORMATION, "Success", "Your item has been successfully added");
+            itemNameField.setText(""); //clears the name
+            itemQuantityField.setText(""); //clears the quantity
+            itemNameField.requestFocus(); //sets cursor onto the nameField
+
         } catch (NumberFormatException e) {
             showAlert(Alert.AlertType.WARNING, "Invalid quantity", "The item quantity has to be a valid number");
         }
         catch (InvalidItemException e){
-            showAlert(Alert.AlertType.WARNING,"Invalid quantity", "The quantity has to be 0 or higher");
+            showAlert(Alert.AlertType.WARNING,"Invalid Input", e.getMessage());
         }
         catch (SQLException e){
             showAlert(Alert.AlertType.ERROR, "Database Error", "Something went horribly wrong in the database :(");

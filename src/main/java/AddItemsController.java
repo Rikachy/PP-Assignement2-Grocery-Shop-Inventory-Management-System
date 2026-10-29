@@ -1,7 +1,7 @@
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-
+import javafx.scene.control.Alert;
 import java.sql.SQLException;
 
 public class AddItemsController {
@@ -26,14 +26,21 @@ public class AddItemsController {
             Database.addItems(itemName, itemQuantity);
 
         } catch (NumberFormatException e) {
-            System.out.println("Quantity MUST be a number");
+            showAlert(Alert.AlertType.WARNING, "Invalid quantity", "The item quantity has to be a valid number");
         }
         catch (InvalidItemException e){
-            System.out.println(e.getMessage());
+            showAlert(Alert.AlertType.WARNING,"Invalid quantity", "The quantity has to be 0 or higher");
         }
         catch (SQLException e){
-            System.out.println("Database ran into trouble: " + e.getMessage());
+            showAlert(Alert.AlertType.ERROR, "Database Error", "Something went horribly wrong in the database :(");
         }
+    }
+
+    public void showAlert(Alert.AlertType type, String title, String message){
+        Alert alert = new Alert(type);
+        alert.setTitle(title);
+        alert.setContentText(message);
+        alert.showAndWait();
     }
 
     @FXML

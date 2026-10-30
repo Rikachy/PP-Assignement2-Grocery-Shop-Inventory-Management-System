@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="417.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SellItemsController">
+   <children>
+      <Label alignment="TOP_CENTER" layoutX="-1.0" layoutY="22.0" prefHeight="35.0" prefWidth="600.0" text="Select an Item to Sell" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label alignment="TOP_CENTER" layoutY="57.0" prefHeight="17.0" prefWidth="600.0" text="Select one row, then enter the quantity to sell " textAlignment="CENTER" />
+      <TableView layoutX="122.0" layoutY="89.0" prefHeight="230.0" prefWidth="356.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="ID" />
+          <TableColumn prefWidth="192.0" text="Item Name" />
+            <TableColumn prefWidth="88.0" text="In Stock" />
+        </columns>
+      </TableView>
+      <Button layoutX="187.0" layoutY="362.0" mnemonicParsing="false" text="Confirm Sale" />
+      <Button layoutX="317.0" layoutY="362.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="84.0" text="Close" />
+      <Label layoutX="187.0" layoutY="329.0" text="Quantity to Sell:" />
+      <TextField id="idemToSellTextField" layoutX="285.0" layoutY="325.0" promptText="Quantity to sell..." />
+   </children>
+</AnchorPane>

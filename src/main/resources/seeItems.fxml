@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="343.0" prefWidth="330.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SeeItemsController">
+   <children>
+      <Pane id="closeButton" layoutY="2.0" prefHeight="337.0" prefWidth="400.0">
+         <children>
+            <Label alignment="TOP_CENTER" layoutX="112.0" layoutY="30.0" text="All Existing Grocery Items" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <effect>
+                  <Blend opacity="0.0" />
+               </effect>
+            </Label>
+            <TableView layoutX="58.0" layoutY="63.0" prefHeight="189.0" prefWidth="278.0">
+              <columns>
+                <TableColumn prefWidth="49.0" text="ID" />
+                <TableColumn prefWidth="139.0" text="Item Name" />
+                  <TableColumn prefWidth="61.0" text="Quantity" />
+              </columns>
+            </TableView>
+            <Button layoutX="163.0" layoutY="265.0" mnemonicParsing="false" text="Close" />
+         </children></Pane>
+   </children>
+</AnchorPane>

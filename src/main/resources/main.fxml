@@ -5,7 +5,7 @@
 
 <VBox xmlns:fx="http://javafx.com/fxml" fx:controller="Controller" alignment="TOP_CENTER" spacing="15" style="-fx-padding: 50 0 0 0;">
     <Label text=" Grocery Shop Control Panel" style="-fx-font-size: 24px; -fx-font-weight: bold;"> </Label>
-    <Button text="Add Items" maxWidth="100" maxHeight="20" onAction="#addItems"/>
+    <Button fx:id="addButton" text="Add Items" maxWidth="100" maxHeight="20" onAction="#addItems"/>
     <Button text="See Items" maxWidth="100" maxHeight="20" onAction="#seeItems"/>
     <Button text="Sell Items" maxWidth="100" maxHeight="20" onAction="#sellItems"/>
     <Button text="Exit" maxWidth="100" maxHeight="20" onAction="#exit"/>

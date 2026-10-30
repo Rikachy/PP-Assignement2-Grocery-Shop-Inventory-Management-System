@@ -9,6 +9,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.scene.control.Alert;
@@ -17,28 +18,33 @@ import javafx.scene.control.Alert;
 public class Controller {
 
 
+    public Button addButton; // added so I can close the scene
 
     @FXML
     private void addItems() throws IOException {
-        FXMLLoader loader = new FXMLLoader(App.class.getResource("/addItems.fxml"));
-        Scene scene = new Scene(loader.load(), 450, 300);
-
-        Stage stage = new Stage();
-        stage.setTitle("Adding Items");
-        stage.setScene(scene);
-        stage.show();
+        openWindow("/addItems.fxml", "Add Items", 450, 400);
     }
     @FXML
-    private void seeItems() {
-        System.out.println("This button sees all items");
+    private void seeItems() throws IOException {
+        openWindow("/seeItems.fxml", "See Items", 450, 400);
     }
     @FXML
-    private void sellItems() {
-        System.out.println("This button sells an item");
+    private void sellItems() throws IOException {
+        openWindow("/SellItems.fxml", "Sell Items", 450, 400);
     }
     @FXML
     private void exit() {
-        System.out.println("This button exits the program");
+        Stage addStage = (Stage)addButton.getScene().getWindow();
+        addStage.close();
     }
 
+    private void openWindow(String fxml, String title, int width, int height) throws IOException {
+        FXMLLoader loader = new FXMLLoader(App.class.getResource(fxml));
+        Scene scene = new Scene(loader.load(), width, height);
+
+        Stage stage = new Stage();
+        stage.setTitle(title);
+        stage.setScene(scene);
+        stage.show();
+    }
 }
